@@ -1,0 +1,23 @@
+#' @title quadratic MLM3-fit to Aravo data using SLA and Snow
+#'
+#'
+#' @description \code{MLM3_Aravo} is a glmerMod object from the lme4 package consisting of the
+#' quadratic fit of the MLM3 model to the Aravo data from the ade4 package using the trait SLA and the environmental variable Snow
+#' with code
+#'
+#' \code{formula.MLM3.quad <- y ~ poly(trait,2) + poly(env,2) +trait:env} +
+#'
+#' \code{(1+trait|site)+(1+env|species)}
+#'
+#' \code{MLM3_Aravo <- glmer(formula.MLM3.quad, data=Aravo_in_glmmformat,}
+#'
+#' \code{family= poisson, nAGQ=0, control = glmerControl(calc.derivs=F))}
+#'
+#' To get the data in \code{Aravo_in_glmmformat} use \code{\link{expand4glmm}}.
+#' @references
+#' ter Braak (2019) New robust weighted averaging- and model-based methods
+#' for assessing trait-environment relationships. Methods in Ecology and Evolution, Appendix A7 (https://doi.org/10.1111/2041-210X.13278)
+
+#' @name MLM3_Aravo
+#' @docType data
+NULL

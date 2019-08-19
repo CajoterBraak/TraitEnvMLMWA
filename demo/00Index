@@ -1,0 +1,6 @@
+TutorialMLM3_Revisit Demo file for MLM3 using the Revisit data
+TutorialMLM3_Aravo   Demo file for MLM3 using the Aravo data
+TutorialWA   Demo file for Weighted Averaging regressions using the Aravo data and the Revisit data
+TutorialWA_Aravo   Demo file for Weighted Averaging regressions using the Aravo data
+TutorialWA_Aravo_Multi Demo file for Multi-trait, Multi-environment WA regressions-based test for trait-environment association using the Aravo data
+TraitEnvMLMWA-Ex Demo file for Weighted Averaging regressions using the Aravo data and the Revisit data
