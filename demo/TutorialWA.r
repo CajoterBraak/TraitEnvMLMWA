@@ -3,8 +3,8 @@ data("aravo",  package = "ade4")
 Y <- aravo$spe
 SLA <- aravo$traits$SLA
 Snow <- aravo$env$Snow
-
-result <- CWMSNC_regressions(Snow, Y, SLA, weighing = "N2", nrepet = 99)
+nrepet <- 19 # change to e.g. 499 or 999
+result <- CWMSNC_regressions(Snow, Y, SLA, weighing = "N2", nrepet = nrepet)
 result$p_values
 summary(result)
 plot(result)
@@ -12,7 +12,7 @@ plot(result)
 # untransformed analysis of all pairs. See TutorialWA_Aravo_Multi.r
 #                                      for transformations that appear useful
 #  data frames E,L,T
-result <- CWMSNC_regressions(aravo$env, aravo$spe, aravo$traits, weighing = "N2", nrepet = 99)
+result <- CWMSNC_regressions(aravo$env, aravo$spe, aravo$traits, weighing = "N2", nrepet = nrepet)
 #result$p_values # contains all pairwise p-values
 #                  for site-based, species-based and max-based permutations
 #result$wFC      # contains all pairwise weighted fourth-corner correlations
@@ -45,7 +45,7 @@ Y <- matrix(Revisit$value, nrow = n_sites,ncol = n_species,
 # trait <- TE_obj$T; env <- TE_obj$E; Y <- TE_obj$L
 #  CWM/SNC regressions ------------------------------------------
 set.seed(1231)
-result <- CWMSNC_regressions(env, Y, trait, weighing = "N2", nrepet = 99)
+result <- CWMSNC_regressions(env, Y, trait, weighing = "N2", nrepet = nrepet)
 summary(result)
 plot(result)
 
@@ -55,12 +55,12 @@ plot(result)
 obj <- make_obj_for_traitenv(env,Y, trait, cutoff=0)
 set.seed(1231)
 # slow
-system.time(aa<- WA_p_max(obj, nrepet = 99, fast = FALSE))
+system.time(aa<- WA_p_max(obj, nrepet = nrepet, fast = FALSE))
 round(aa$p_values,4)
 
 set.seed(1231)
 # default
-system.time(bb<- WA_p_max(obj, nrepet = 99, fast = TRUE))
+system.time(bb<- WA_p_max(obj, nrepet = nrepet, fast = TRUE))
 round(bb$p_values,4)
 # illustrating their equality
 or1<- order(aa$sim.row)
@@ -73,19 +73,19 @@ all.equal(or1,or2)
 
 # fast, all three weighings   --------------------------------------------------
 
-system.time(bb<- WA_p_max(obj, weighing = "N2", nrepet = 99))
+system.time(bb<- WA_p_max(obj, weighing = "N2", nrepet = nrepet))
 round(bb$p_values,5)
 
-system.time(FC<- WA_p_max(obj, weighing = "FC", nrepet = 99))
+system.time(FC<- WA_p_max(obj, weighing = "FC", nrepet = nrepet))
 round(FC$p_values,5)
 
-system.time(cc<- WA_p_max(obj, weighing = "unw", nrepet = 99))
+system.time(cc<- WA_p_max(obj, weighing = "unw", nrepet = nrepet))
 round(cc$p_values,5)
 
 # comparion with fourtcorner in ade4  ---------------------------------------
 
-ade4::fourthcorner(data.frame(env),as.data.frame(Y),data.frame(trait), nrepet = 99)
-result <- CWMSNC_regressions(env, Y, trait, weighing = "FC", nrepet = 99)
+ade4::fourthcorner(data.frame(env),as.data.frame(Y),data.frame(trait), nrepet = nrepet)
+result <- CWMSNC_regressions(env, Y, trait, weighing = "FC", nrepet = nrepet)
 summary(result,digits = 4)
 
 

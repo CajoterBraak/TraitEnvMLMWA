@@ -27,15 +27,16 @@ set.seed(1231)
 
 E<- aravo$env[,c(1,6,2)]
 T <- aravo$traits[,c(2,6)]
-cc<- WA_p_max(E, Y, T, nrepet =999, weighing = "N2", type = "onebyone")
+nrepet <- 99 # change to e.g. 499 or 999
+cc<- WA_p_max(E, Y, T, nrepet =nrepet, weighing = "N2", type = "onebyone")
 cc$p_values
 
 
 
-dd<- CWMSNC_regressions(E, Y, T, nrepet =999, weighing = "N2")
+dd<- CWMSNC_regressions(E, Y, T, nrepet =nrepet, weighing = "N2")
 
 
-aa<- WA_p_max(E, Y, T, nrepet =999, weighing = "N2", score_test = TRUE)
+aa<- WA_p_max(E, Y, T, nrepet =nrepet, weighing = "N2", score_test = TRUE)
 aa$p_values
 
 # Explicit conversion to dummy variables as performed in WA_p_max  -------
@@ -48,7 +49,7 @@ summary(T)
 obj <- make_obj_for_traitenv(E,Y, T, cutoff=0)
 set.seed(1231)
 
-bb<- WA_p_max(obj, nrepet =999, weighing = "N2", score_test = TRUE)
+bb<- WA_p_max(obj, nrepet =nrepet, weighing = "N2", score_test = TRUE)
 bb$p_values
 
 
