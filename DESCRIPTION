@@ -1,11 +1,10 @@
 Package: TraitEnvMLMWA
-Title: Weighted Avaraging (WA) and Multi-level Methods (MLM) for trait-environment
-        association in functional and community ecology
-Version: 0.0.0.9000
+Title: Weighted Averaging (WA) and Multi-Level Methods (MLM) for Trait-Environment Association in Functional and Community Ecology
+Version: 0.9001
 Authors@R: person("Cajo", "ter Braak", email = "Cajo.terBraak@wur.nl", role = c("aut", "cre"))
-Description: The package started with the paper New robust weighted averaging- and model-based methods for assessing trait-environment relationships (Methods in Ecology and Evolution). The model-based methods are GLMMs, here called multi-level models (MLM), of which the novel MLM3 outperforms all existing methods. MLM3 has up to 30% more power, but the WA-method are 500 times faster than MLM3. The main function for WA-methods is CWMSNC_regressions. The main functions for MLM3 are expand4glmm and MLM3_p_max.
+Description: This package grew out of the paper New robust weighted averaging- and model-based methods for assessing trait-environment relationships (Methods in Ecology and Evolution). The model-based methods are GLMMs, here called multi-level models (MLM), of which the novel MLM3 outperforms all existing methods. MLM3 has up to 30% more power, but the WA-methods are 500 times faster than MLM3. The main function for WA-methods is CWMSNC_regressions. The main functions for MLM3 are make_obj_for_traitenv, expand4glmm and MLM3_p_max.
 Depends: R (>= 3.5.0)
-License: GPL-2
+License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
