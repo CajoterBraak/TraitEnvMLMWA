@@ -25,7 +25,7 @@
 #' The long-dash line is at the weigthed mean of the y-coordinate of the points in plots. The dotted line is at the unweighted mean of the trait (left)
 #' and on of the environmental variable (right). If, in the second-left plot, the dashed line is above the dotted line, the trait main effect is positive
 #' (check in first plot, right diagram). If, in the second-right plot, the dashed line is above the dotted line, the environmental main effect is positive
-#' (check in first plot, left diagram). In this sense, the second plot shows the sign of the main effects, shown more explicitly in the first plot.
+#' (check in first plot, left diagram). In this sense, the second plot shows not only the assocation (interaction) but also the sign of the main effects, shown more explicitly in the first plot.
 #' @seealso \code{\link{CWMSNC_regressions}}.
 #' @example demo/TutorialWA_Aravo.r
 #' @references ter Braak (2019) New robust weighted averaging- and model-based methods
