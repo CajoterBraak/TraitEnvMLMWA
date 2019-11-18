@@ -347,7 +347,7 @@ wcor <- function(X, Y=X, w = rep(1,nrow(X))){
   t(Xstd) %*% diag(w) %*% Ystd
   }
 
-wSVD <- function(Y,w=rep(1/nrow(Y),nrow(Y))){
+wSVD <- function(Y,w=rep(1/nrow(Y),nrow(Y)), eps = 1.e-6){
   sw <- sqrt(w)
   Ystar <- Y*sw
   svdY <- svd(Ystar)

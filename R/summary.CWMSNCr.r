@@ -14,6 +14,7 @@
 #' @param p_value_adjust_method method for adjustment of the p-values for multiple comparison.
 #' "fdr" (default), "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", or "none". Used only for multiple or nominal trait and environmental data
 #' @param significance_level threshold for plotting a heatmap of the signed p-values
+#' @param silent no printed output when TRUE (default FALSE)
 #' @param ... other optional arguments
 #' @return  For quantitative single trait-single environmental variable data:
 #' a numeric matrix with trait-environment correlations (first row) and p-values (second row) for sites, species and their min/max combination (columns).
@@ -36,7 +37,7 @@
 #' @references ter Braak (2019) New robust weighted averaging- and model-based methods
 #' for assessing trait-environment relationships. Methods in Ecology and Evolution (https://doi.org/10.1111/2041-210X.13278)
 #' @export
-summary.CWMSNCr <- function(object, ..., digits = 3, type ="max", p_value_adjust_method = "fdr", significance_level = 0.05){
+summary.CWMSNCr <- function(object, ..., digits = 3, type ="max", p_value_adjust_method = "fdr", significance_level = 0.05, silent = FALSE){
   # object should be an object resulting from CWMSNC_regressions
   if (sum(dim(object$wFC)[-3])==2){ # single trait and env analysed
     res <- rbind(object$wFC, object$p_values)
@@ -53,15 +54,17 @@ summary.CWMSNCr <- function(object, ..., digits = 3, type ="max", p_value_adjust
     )
       if (itype ==3) typeFC = "signed min" else typeFC <- type
       p_val_adj <- matrix(p_adjust(object$p_values, p_value_adjust_method, itype), nrow= dim(object$p_values)[1], ncol =dim(object$p_values)[2], dimnames = dimnames(object$p_values)[c(1,2)])
-      cat(paste("Fourth-corner correlations", " (", object$weighing, ")", " (", typeFC, ")\n" , sep = ""))
-      print(round(object$wFC[,,itype], digits = digits))
-      cat(paste("p-values", " (", object$weighing, ")", " (", type, ")\n" , sep = ""))
-      print(round(p_val_adj, digits = digits))
+      if (!silent) {
+        cat(paste("Fourth-corner correlations", " (", object$weighing, ")", " (", typeFC, ")\n" , sep = ""))
+        print(round(object$wFC[,,itype], digits = digits))
+        cat(paste("p-values", " (", object$weighing, ")", " (", type, ")\n" , sep = ""))
+        print(round(p_val_adj, digits = digits))
+      }
       sp_values <- p_val_adj * ifelse(sign(object$wFC[,,itype])==0,1,sign(object$wFC[,,itype]))
       # print p-values only with sign of the correlation
       #  print(round(sp_values, digits = digits))
       hm <- heatmap_p(sp_values, significance_level = significance_level)
-      print(hm)
+      if (!silent) print(hm)
       result <- list(p_val_adj =p_val_adj, FCcorrelations = object$wFC[,,itype], heatmap = hm)
       invisible(result)
   }

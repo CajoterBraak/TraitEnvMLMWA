@@ -5,7 +5,8 @@
 \title{Summary of a weigthed averaging-based analysis of trait-environment association}
 \usage{
 \method{summary}{CWMSNCr}(object, ..., digits = 3, type = "max",
-  p_value_adjust_method = "fdr", significance_level = 0.05)
+  p_value_adjust_method = "fdr", significance_level = 0.05,
+  silent = FALSE)
 }
 \arguments{
 \item{object}{an object of class CWMSNCr, created by \code{\link{CWMSNC_regressions}}.}
@@ -20,6 +21,8 @@
 "fdr" (default), "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", or "none". Used only for multiple or nominal trait and environmental data}
 
 \item{significance_level}{threshold for plotting a heatmap of the signed p-values}
+
+\item{silent}{no printed output when TRUE (default FALSE)}
 }
 \value{
 For quantitative single trait-single environmental variable data:
