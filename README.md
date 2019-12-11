@@ -10,6 +10,7 @@ The goal of TraitEnvMLMWA is to analyse trait-environment associations in ecolog
 You can install the released version of TraitEnvMLMWA from github with:
 
 ``` r
+install.packages("remotes")
 remotes::install_github("CajoterBraak/TraitEnvMLMWA")
 ```
 
