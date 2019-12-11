@@ -22,8 +22,8 @@
 #' @return  A list of two printable and modifiable objects of class ggplot2. The first plots the main effects, the second the association.
 #' The y-coordinate of the points in the first plot is the logarithm of the site total (left) and the species total (right).
 #' The y-coordinate of the points in the second plot is weighted trait mean (CWM, left) and weighted environmental mean (SNC, right).
-#' The long-dash line is at the weigthed mean of the y-coordinate of the points in plots. The dotted line is at the unweighted mean of the trait (left)
-#' and on of the environmental variable (right). If, in the second-left plot, the dashed line is above the dotted line, the trait main effect is positive
+#' The long-dash line is at the weighted mean of the y-coordinate of the points in plots. The dotted line is at the unweighted mean of the trait (left)
+#' and of the environmental variable (right). If, in the second-left plot, the dashed line is above the dotted line, the trait main effect is positive
 #' (check in first plot, right diagram). If, in the second-right plot, the dashed line is above the dotted line, the environmental main effect is positive
 #' (check in first plot, left diagram). In this sense, the second plot shows not only the assocation (interaction) but also the sign of the main effects, shown more explicitly in the first plot.
 #' @seealso \code{\link{CWMSNC_regressions}}.
