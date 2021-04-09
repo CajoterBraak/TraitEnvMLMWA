@@ -4,9 +4,15 @@
 \alias{MLM3_p_max}
 \title{Permutational max test of trait-environment assocation for MLM models}
 \usage{
-MLM3_p_max(MLM3, nrepet = 19, Binomial_total = 0, test_stat = "Wald",
-  how_to_permute = list(sites = how(), species = how()), print = 1,
-  nAGQ = 0)
+MLM3_p_max(
+  MLM3,
+  nrepet = 19,
+  Binomial_total = 0,
+  test_stat = "Wald",
+  how_to_permute = list(sites = how(), species = how()),
+  print = 1,
+  nAGQ = 0
+)
 }
 \arguments{
 \item{MLM3}{the fitted MLM3 object, created by glmer (lme4) or glmmTMB.}

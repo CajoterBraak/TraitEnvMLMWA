@@ -542,6 +542,7 @@ syssample <- function(i = 0, exclude = 0, perm.mat = 0, n, control_perm = permut
   # function to generate either random samples (if !is.matrix(perm.mat)) or
   # a systematic sample: i-th or for i>= exclude: i+1 th row of permat (i.e. without the excluded sample)
   # exclude = 0 for no exclude, or permutation number to exclude
+  # n = number of data points
   if (is.matrix(perm.mat)){
     if (!exclude){ ii <- i} else{
       if(i<exclude) ii <- i else {ii <- i + 1}

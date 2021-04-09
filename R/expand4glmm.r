@@ -81,7 +81,7 @@ expand4glmm <- function(obj, K= 0){
       }
     } else {
       XYZ <- data.frame(y,site,species, obs = 1:length(y),Tvec, Evec, ET)
-      if (length(names(XYZ)==7))names(XYZ)[5:6] <- c("trait", "env") # length(names(XYZ)==6): single trait/env
+      if (length(names(XYZ))==7)names(XYZ)[5:6] <- c("trait", "env") # length(names(XYZ)==6): single trait/env
     }
     if (!is.factor(site)) XYZ$site <- factor(XYZ$site)
     if (!is.factor(species)) XYZ$species <- factor(XYZ$species)

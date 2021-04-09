@@ -4,9 +4,15 @@
 \alias{summary.CWMSNCr}
 \title{Summary of a weigthed averaging-based analysis of trait-environment association}
 \usage{
-\method{summary}{CWMSNCr}(object, ..., digits = 3, type = "max",
-  p_value_adjust_method = "fdr", significance_level = 0.05,
-  silent = FALSE)
+\method{summary}{CWMSNCr}(
+  object,
+  ...,
+  digits = 3,
+  type = "max",
+  p_value_adjust_method = "fdr",
+  significance_level = 0.05,
+  silent = FALSE
+)
 }
 \arguments{
 \item{object}{an object of class CWMSNCr, created by \code{\link{CWMSNC_regressions}}.}

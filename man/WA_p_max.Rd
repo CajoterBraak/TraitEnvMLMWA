@@ -5,8 +5,17 @@
 \title{Max test for the joint association between multiple traits
 and environmental variables  (incl. nominal variables) using weighted averaging methods (CWM/SNC regression)}
 \usage{
-WA_p_max(E, L = 0, T = 0, nrepet = 19, weighing = "N2",
-  type = "joint", score_test = TRUE, cutoff = 0, fast = TRUE)
+WA_p_max(
+  E,
+  L = 0,
+  T = 0,
+  nrepet = 19,
+  weighing = "N2",
+  type = "joint",
+  score_test = TRUE,
+  cutoff = 0,
+  fast = TRUE
+)
 }
 \arguments{
 \item{E}{a data frame, numeric n-vector, factor or n-by-p matrix, containing the values of the environmentalvariables in n sites, or

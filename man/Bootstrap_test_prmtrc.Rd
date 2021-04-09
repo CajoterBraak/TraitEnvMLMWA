@@ -4,8 +4,13 @@
 \alias{Bootstrap_test_prmtrc}
 \title{Parametric bootstrap test of trait-environment assocation using the MLM models}
 \usage{
-Bootstrap_test_prmtrc(MLM3, test_stat = "Wald", nrepet = 19,
-  Binomial_total = 0, nAGQ = 0)
+Bootstrap_test_prmtrc(
+  MLM3,
+  test_stat = "Wald",
+  nrepet = 19,
+  Binomial_total = 0,
+  nAGQ = 0
+)
 }
 \arguments{
 \item{MLM3}{the fitted MLM3 object, created by glmer (lme4) or glmmTMB.}

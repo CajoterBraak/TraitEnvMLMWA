@@ -4,8 +4,11 @@
 \alias{plot_MLM3}
 \title{Plotting the interaction of a MLM3 model}
 \usage{
-plot_MLM3(MLM3, verbose = FALSE,
-  title = paste("site and species effects (fixed + random) against env and trait"))
+plot_MLM3(
+  MLM3,
+  verbose = FALSE,
+  title = paste("site and species effects (fixed + random) against env and trait")
+)
 }
 \arguments{
 \item{MLM3}{the fitted MLM3 object, created by glmer (lme4) or glmmTMB.}

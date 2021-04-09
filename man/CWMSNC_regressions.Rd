@@ -4,8 +4,15 @@
 \alias{CWMSNC_regressions}
 \title{Weigthed averaging methods for pairwise trait-environment associations}
 \usage{
-CWMSNC_regressions(E, L, T, weighing = "N2", cutoff = 0,
-  nrepet = 499, how_to_permute = list(sites = how(), species = how()))
+CWMSNC_regressions(
+  E,
+  L,
+  T,
+  weighing = "N2",
+  cutoff = 0,
+  nrepet = 499,
+  how_to_permute = list(sites = how(), species = how())
+)
 }
 \arguments{
 \item{E}{a data frame, numeric n-vector, factor or n-by-p matrix, containing the values of the environmentalvariables in n sites, or
