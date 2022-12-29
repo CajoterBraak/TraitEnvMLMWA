@@ -3,7 +3,7 @@
 #' @description
 #' \code{summary.CWMSNCr} summarizes the results of \code{\link{CWMSNC_regressions}}. For a single quantitative trait
 #' and a single quantitative environmental variable three types of correlations and p-values are
-#' given (sites, species, min/max). For nominal and multipe
+#' given (sites, species, min/max). For nominal and multiple
 #' trait and environment data, one set of such correlations and p-values is printed
 #' (by default, the max p-values and signed minimum fourth-corner correlations)
 #' with an associated heatmap of the significant associations. The p-values can be adjusted for
