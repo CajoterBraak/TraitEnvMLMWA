@@ -21,8 +21,8 @@ trait, environment and abundance data. The argument \code{dat} is usually create
 \code{\link{expand4glmm}}. The function is used repeatedly in \code{\link{MLM3_p_max}}.
 }
 \details{
-The order of data in dat should be in standard order, that is, first all data from site 1, then site 2,
-with all species listed in identical order in each site (including zero abundances).
+The order of data in dat should be in standard order, that is, first all data on species 1, then species 2,
+with all sites listed in identical order for each species (including zero abundances).
 BEWARE: The function currently works for a single trait and environmental variable only!!!!
 }
 \examples{

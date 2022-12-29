@@ -6,7 +6,8 @@
 #' @param  MLM3 the fitted MLM3 object, created by glmer (lme4) or glmmTMB.
 #' @param  verbose logical; default FALSE. If TRUE, a summary of the MLM3 object is printed.
 #' @param  title character text to adapt the main title.
-#' @details  The code uses libraries ggplot2 and dplyr.
+#' @details  The code uses libraries ggplot2 and dplyr. The trait and environment variable names
+#' in the MLM3 model must be 'trait' and 'env' as in the example (as they are hard coded)
 #' @return  A list of printable and modifiable objects of class ggplot2.
 #' @seealso \code{\link{expand4glmm}}.
 #' @references ter Braak (2019) New robust weighted averaging- and model-based methods
@@ -16,7 +17,7 @@
 #' data("Revisit")
 #' formula.MLM3 <- y ~  env*trait  + (1 + env|species) + (1 + trait| site)
 #' MLM3 <- glmmTMB(formula.MLM3, family = betabinomial,  data=Revisit)
-#' plot(MLM3)
+#' plot_MLM3(MLM3)
 #' }
 #' @import ggplot2
 #' @export

@@ -37,8 +37,10 @@ An object of class CWMSNCr which is a named list, among which,
 \item{p_parametric}{parametric p-values: site-based and species-based and the maximum of these two values
 (can be trusted only for weighing =='unw'). NA for more than one trait or one environmental variable.}
 \item{wFC}{(weighted) fourth-corner correlations for sites and species and its signed minimum.}
-\item{lm_CWMe}{lm-object of the regression of CWM on E}
-\item{lm_SNCt}{lm-object of the regression of SNC on T}
+\item{lm_CWMe}{lm-object of the (possibly multiple!) regression of CWM on E.
+ This item is pairwise only for a single environmental variable.}
+\item{lm_SNCt}{lm-object of the (possibly multiple!) regression of SNC on T.
+This item is pairwise only for a single trait.}
 }
 \description{
 \code{CWMSNC_regressions} carries out weighted or unweighted CWM/SNC regression for each combition of trait and environmental variable

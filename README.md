@@ -7,7 +7,8 @@ The goal of TraitEnvMLMWA is to analyse trait-environment associations in ecolog
 
 ## Installation
 
-You can install the released version of TraitEnvMLMWA from github with:
+You can install the released version of TraitEnvMLMWA from github by
+invoking the R-code within an R-console:
 
 ``` r
 install.packages("remotes")

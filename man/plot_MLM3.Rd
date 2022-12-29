@@ -25,14 +25,15 @@ A list of printable and modifiable objects of class ggplot2.
 of a fitted MLM3 object.
 }
 \details{
-The code uses libraries ggplot2 and dplyr.
+The code uses libraries ggplot2 and dplyr. The trait and environment variable names
+in the MLM3 model must be 'trait' and 'env' as in the example (as they are hard coded)
 }
 \examples{
 \dontrun{
 data("Revisit")
 formula.MLM3 <- y ~  env*trait  + (1 + env|species) + (1 + trait| site)
 MLM3 <- glmmTMB(formula.MLM3, family = betabinomial,  data=Revisit)
-plot(MLM3)
+plot_MLM3(MLM3)
 }
 }
 \references{

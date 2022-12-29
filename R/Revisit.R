@@ -16,7 +16,7 @@
 #' \item\code{site}  study site ID (integer, one study plot per site)
 #' \item\code{species} name of species
 #' \item\code{trait} functional trait: leaf tissue carbon to nitrogen ratio
-#' \item\code{env} environmental variable: site position on the topogrpahic moisture gradient (higher numbers are topographically drier sites)
+#' \item\code{env} environmental variable: site position on the topographic moisture gradient (higher numbers are topographically drier sites)
 #' \item\code{value} plant abundance (see Description for details)
 #' \item\code{y} matrix with two columns with, as successes and failures, value and 100 - value, respectively.
 #' }
